@@ -55,3 +55,20 @@ $(function () {
 		},
 	});
 });
+
+// const url = 'https://deezerdevs-deezer.p.rapidapi.com/playlist/12327094931';
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '5d7e0c62f8msh48153546cbf7716p14f832jsn45ef0ba10273',
+// 		'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com',
+// 	},
+// };
+
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.text();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
