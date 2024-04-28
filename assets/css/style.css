@@ -5,6 +5,13 @@
 	box-sizing: border-box;
 }
 
+.slash_screen_wrapper {
+	display: block;
+}
+main {
+	display: none;
+}
+
 /* ! Slash Screen */
 .slash_screen_wrapper {
 	position: fixed;
