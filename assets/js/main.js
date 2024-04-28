@@ -8,7 +8,7 @@ $(function () {
 		setTimeout(function () {
 			$('.slash_screen_wrapper').fadeOut();
 			$('.slash_screen_wrapper').remove();
-		}, 1000);
+		}, 5000);
 	});
 
 	$window.onload = function () {
@@ -51,8 +51,7 @@ $(function () {
 		loop: true,
 		effect: 'fade',
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 		},
 	});
 });
-

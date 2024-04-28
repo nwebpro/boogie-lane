@@ -63,6 +63,10 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	transition: all 0.3s ease-in-out;
+}
+.arrow_icon:hover {
+	width: 130px;
 }
 .hero_section_wrapper {
 	--s: 220px;
@@ -91,4 +95,47 @@
 	min-width: calc(80% + var(--s) / 2);
 	place-self: end;
 	clip-path: polygon(var(--s) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Audio Play and stop floating icon */
+.vinel_wrap {
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 30px;
+	cursor: pointer;
+}
+.vinel_wrap img {
+	width: 70px;
+	height: 70px;
+}
+.vinel_wrap img.playing {
+	animation: spin 2s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+	.scratch_image {
+		display: none;
+	}
+}
+/* ! Mobile Responsive */
+@media screen and (max-width: 480px) {
+	.boogie_lane_logo {
+		left: 40px;
+	}
+	.arrow_icon {
+		width: 60px;
+	}
+	.arrow_icon:hover {
+		width: 80px;
+	}
 }
