@@ -74,7 +74,7 @@ async function fetchAndPlayPlaylist() {
 	}
 }
 
-// Wait for 10 seconds after the website loads, then fetch and play the playlist
+// Wait for 5 seconds after the website loads, then fetch and play the playlist
 window.onload = () => {
 	setTimeout(fetchAndPlayPlaylist, 5000);
 
