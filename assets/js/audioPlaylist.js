@@ -26,6 +26,7 @@ function playAudio(audioUrl, index, playlist) {
 		isPlaying = false;
 		toggleIcon();
 	});
+
 }
 
 // Function to toggle play/pause icon

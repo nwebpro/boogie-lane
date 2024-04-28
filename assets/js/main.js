@@ -5,7 +5,7 @@ $(function () {
 	setTimeout(function () {
 		$('.slash_screen_wrapper').fadeOut(400, function () {
 			$(this).remove();
-			$('main').fadeIn(400); // Show the main content after fading out the splash screen
+			$('main').fadeIn(400);
 		});
 	}, 5000);
 
