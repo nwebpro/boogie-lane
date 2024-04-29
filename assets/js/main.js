@@ -20,32 +20,32 @@ $(function () {
 		},
 	});
 
-	function togglePlay() {
-		const audio = document.getElementById('audioPlayer');
-		const vinylImage = document.querySelector('.vinel_wrap img');
-		if (audio.paused) {
-			audio.play();
-			vinylImage.classList.add('playing');
-		} else {
-			audio.pause();
-			vinylImage.classList.remove('playing');
-		}
-	}
+	// Create the audio player
+	setTimeout(function () {
+		let audioPlayer = document.createElement('audio');
+		audioPlayer.src = 'http://icyrelay.181.fm/181-bebop_128k.mp3';
+		audioPlayer.autoplay = true;
 
-	// Event listener to toggle play/pause when the button is clicked
-	document
-		.getElementById('playPauseButton')
-		.addEventListener('click', function () {
-			togglePlay();
+		// Add 'playing' class to the vinyl image when audio starts playing
+		audioPlayer.addEventListener('play', function () {
+			const vinylImage = document.querySelector('.vinel_wrap img');
+			vinylImage.classList.add('playing');
 		});
 
-	// Autoplay after 5 seconds
-	setTimeout(function () {
-		const audioPlayer = document.createElement('audio');
-		audioPlayer.id = 'audioPlayer';
-		audioPlayer.src = 'http://icyrelay.181.fm/181-bebop_128k.mp3';
-		audioPlayer.setAttribute('autoplay', 'autoplay');
-		document.body.appendChild(audioPlayer);
-		togglePlay(); // Start playing the audio
+		// Remove 'playing' class from the vinyl image when audio is paused
+		audioPlayer.addEventListener('pause', function () {
+			const vinylImage = document.querySelector('.vinel_wrap img');
+			vinylImage.classList.remove('playing');
+		});
+
+		// Play/Pause button functionality
+		const playPauseButton = document.getElementById('playPauseButton');
+		playPauseButton.addEventListener('click', function () {
+			if (audioPlayer.paused) {
+				audioPlayer.play();
+			} else {
+				audioPlayer.pause();
+			}
+		});
 	}, timeOutValue);
 });
