@@ -41,9 +41,11 @@ $(function () {
 
 	// Autoplay after 5 seconds
 	setTimeout(function () {
-		document
-			.getElementById('audioPlayer')
-			.setAttribute('autoplay', 'autoplay');
+		const audioPlayer = document.createElement('audio');
+		audioPlayer.id = 'audioPlayer';
+		audioPlayer.src = 'http://icyrelay.181.fm/181-bebop_128k.mp3';
+		audioPlayer.setAttribute('autoplay', 'autoplay');
+		document.body.appendChild(audioPlayer);
 		togglePlay(); // Start playing the audio
 	}, timeOutValue);
 });
