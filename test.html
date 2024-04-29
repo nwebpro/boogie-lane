@@ -40,44 +40,10 @@
 		</style>
 	</head>
 	<body>
-		<audio id="myAudio" autoplay>
-			<!-- http://icyrelay.181.fm/181-bebop_128k.mp3 -->
-			<source
-				src="https://ufmb.etldev.xyz/storage/audio/audioEnglishFile/the-unfinished-memoirs%20Part%2022%20Page%20112-114%20Full%20track%20correction%20and%20CHECKED.mp3"
-				type="audio/mpeg"
-			/>
-			Your browser does not support the audio element.
-		</audio>
-
 		<div id="overlay"></div>
 		<div id="website" style="display: none">
 			<!-- Your website content here -->
 			<button id="playPauseButton">Play/Pause</button>
 		</div>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				var audio = document.getElementById('myAudio');
-				var overlay = document.getElementById('overlay');
-				var website = document.getElementById('website');
-				var playPauseButton =
-					document.getElementById('playPauseButton');
-
-				// Hide overlay and show website after 5 seconds
-				setTimeout(function () {
-					overlay.style.display = 'none';
-					website.style.display = 'block';
-				}, 5000);
-
-				// Toggle play/pause when playPauseButton is clicked
-				playPauseButton.addEventListener('click', function () {
-					if (audio.paused) {
-						audio.play();
-					} else {
-						audio.pause();
-					}
-				});
-			});
-		</script>
 	</body>
 </html>
