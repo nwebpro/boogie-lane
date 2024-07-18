@@ -29,12 +29,21 @@
 	<body>
 		<div class="slash_screen_wrapper">
 			<div class="slash_screen_content">
-				<img
-					src="assets/images/bg_screen.jpg"
+				<!-- <img
+					src="assets/images/city.mp4"
 					class="img-fluid"
 					alt="Slash Screen"
 					draggable="false"
-				/>
+				/> -->
+				<video
+					src="assets/images/city.mp4"
+					class="img-fluid"
+					alt="Slash Screen"
+					draggable="false"
+					autoplay
+					loop
+					muted
+				></video>
 			</div>
 		</div>
 		<main>
@@ -141,31 +150,5 @@
 		<script src="assets/plugin/swiper/swiper-bundle.min.js"></script>
 		<script src="assets/plugin/gsap/gsap.min.js"></script>
 		<script src="assets/js/main.js"></script>
-
-		<script>
-			setTimeout(function () {
-				let audioPlayer = $('<audio>', {
-					src: 'https://nashe1.hostingradio.ru:18000/jazz-128.mp3',
-					autoplay: true,
-					on: {
-						play: function () {
-							$('.vinel_wrap img').addClass('playing');
-						},
-						pause: function () {
-							$('.vinel_wrap img').removeClass('playing');
-						},
-					},
-				});
-
-				// Play/Pause button functionality
-				$('#playPauseButton').on('click', function () {
-					if (audioPlayer.prop('paused')) {
-						audioPlayer.trigger('play');
-					} else {
-						audioPlayer.trigger('pause');
-					}
-				});
-			}, 5000);
-		</script>
 	</body>
 </html>
